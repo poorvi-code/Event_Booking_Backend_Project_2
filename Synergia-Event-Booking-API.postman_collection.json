@@ -1,0 +1,126 @@
+{
+  "info": {
+    "name": "Synergia Event Booking API (MongoDB)",
+    "_postman_id": "b8e8a5d7-32de-42f3-86f3-9e58c9cc6f19",
+    "description": "Postman collection for testing all Synergia Event Booking API endpoints (CRUD, search, filter).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Events",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:3000/api/events", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "events"] }
+      }
+    },
+    {
+      "name": " Create Event",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"SSTH 2025\",\n    \"date\": \"2025-11-07\",\n    \"location\": \"Manglore\",\n    \"description\": \"Science model competition\"\n}"
+        },
+        "url": { "raw": "http://localhost:3000/api/events", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "events"] }
+      }
+    },
+    {
+      "name": " Update Event by ID",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"location\": \"Banglore\",\n    \"description\": \"Updated event description\"\n}"
+        },
+        "url": { "raw": "http://localhost:3000/api/events/{{eventId}}", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "events", "{{eventId}}"] }
+      }
+    },
+    {
+      "name": " Delete Event by ID",
+      "request": {
+        "method": "DELETE",
+        "url": { "raw": "http://localhost:3000/api/events/{{eventId}}", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "events", "{{eventId}}"] }
+      }
+    },
+    {
+      "name": " Get All Bookings",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:3000/api/bookings", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "bookings"] }
+      }
+    },
+    {
+      "name": " Create Booking",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Poorvi\",\n    \"email\": \"poorvi@gmail.com\",\n    \"eventId\": \"{{eventId}}\"\n}"
+        },
+        "url": { "raw": "http://localhost:3000/api/bookings", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "bookings"] }
+      }
+    },
+    {
+      "name": " Get Booking by ID",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:3000/api/bookings/{{bookingId}}", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "bookings", "{{bookingId}}"] }
+      }
+    },
+    {
+      "name": " Update Booking",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Poorvi Updated\",\n    \"email\": \"poorvi.cs23@sahyadri.edu.in\"\n}"
+        },
+        "url": { "raw": "http://localhost:3000/api/bookings/{{bookingId}}", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "bookings", "{{bookingId}}"] }
+      }
+    },
+    {
+      "name": " Delete Booking",
+      "request": {
+        "method": "DELETE",
+        "url": { "raw": "http://localhost:3000/api/bookings/{{bookingId}}", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "bookings", "{{bookingId}}"] }
+      }
+    },
+    {
+      "name": " Search Booking by Email",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/bookings/search?email=alice",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "bookings", "search"],
+          "query": [{ "key": "email", "value": "poorvi" }]
+        }
+      }
+    },
+    {
+      "name": " Filter Bookings by Event",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/bookings/filter?event=Synergia",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "bookings", "filter"],
+          "query": [{ "key": "event", "value": "SSTH" }]
+        }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "eventId", "value": "" },
+    { "key": "bookingId", "value": "" }
+  ]
+}
