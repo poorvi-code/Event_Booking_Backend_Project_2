@@ -105,7 +105,13 @@ Step 2 — Test Endpoints (in order)
 9	DELETE	/api/bookings/:id	Delete a booking
 
 10	GET	/api/bookings/search?email=example@gmail.com	Search bookings by email
-<img width="1920" height="1080" alt="Screenshot 2025-10-30 223846" src="https://github.com/user-attachments/assets/ad99c5ed-07e2-4a79-bd48-2cfe690d7baf" />
-<img width="1920" height="1080" alt="Screenshot 2025-10-30 223554" src="https://github.com/user-attachments/assets/49018d91-ac4d-40ac-933d-9ea665bef139" />
 
 11	GET	/api/bookings/filter?event=Synergia	Filter bookings by event name
+
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-30 223846" src="https://github.com/user-attachments/assets/ad99c5ed-07e2-4a79-bd48-2cfe690d7baf" />
+
+
+<img width="1920" height="1080" alt="Screenshot 2025-10-30 223554" src="https://github.com/user-attachments/assets/49018d91-ac4d-40ac-933d-9ea665bef139" />
+
+
