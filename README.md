@@ -87,13 +87,25 @@ Open the collection from the sidebar.
 Step 2 — Test Endpoints (in order)
 #	HTTP Method	Endpoint	Description
 1	GET	/api/events	Get all events
+
 2	POST	/api/events	Create a new event
+
 3	PUT	/api/events/:id	Update event details
+
 4	DELETE	/api/events/:id	Delete an event
+
 5	GET	/api/bookings	Get all bookings
+
 6	POST	/api/bookings	Create a new booking
+
 7	GET	/api/bookings/:id	Get booking by ID
+
 8	PUT	/api/bookings/:id	Update booking details
+
 9	DELETE	/api/bookings/:id	Delete a booking
+
 10	GET	/api/bookings/search?email=example@gmail.com	Search bookings by email
+<img width="1920" height="1080" alt="Screenshot 2025-10-30 223846" src="https://github.com/user-attachments/assets/ad99c5ed-07e2-4a79-bd48-2cfe690d7baf" />
+<img width="1920" height="1080" alt="Screenshot 2025-10-30 223554" src="https://github.com/user-attachments/assets/49018d91-ac4d-40ac-933d-9ea665bef139" />
+
 11	GET	/api/bookings/filter?event=Synergia	Filter bookings by event name
